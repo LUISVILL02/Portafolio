@@ -29,7 +29,10 @@ export default {
       fontSize: {
         h2: "5rem", 
         h3: "60px",
-        button: "1.875rem", 
+        button: "1.875rem",
+        p: "40px",
+        tittleCard: "30px",
+        description: "15px" 
       },
     },
   },
