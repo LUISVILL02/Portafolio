@@ -5,7 +5,6 @@ export const AboutMe = () => {
   return (
     <>
         <InfoMe/>
-        <div>figure</div>
     </>
   )
 }
