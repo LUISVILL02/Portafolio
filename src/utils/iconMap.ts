@@ -3,9 +3,15 @@ import { ProjectIcon } from '../components/icons/ProjectIcon';
 import { SkillsIcon } from '../components/icons/SkillsIcon';
 import { ContactIcon } from '../components/icons/ContactIcon';
 
-export const iconMap: Record<string, React.FC> = {
+import { CSSProperties } from 'react';
+
+interface IconProps {
+    style: CSSProperties;
+}
+
+export const iconMap: Record<string, React.FC<IconProps>> = {
     Sobre_me: HomeIcon,
     Proyectos: ProjectIcon,
-    Habilidades: SkillsIcon,
+    Habilidades: SkillsIcon,    
     Contacto: ContactIcon,
 };
