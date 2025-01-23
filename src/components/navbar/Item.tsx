@@ -22,7 +22,7 @@ export const Item: React.FC<ItemProp> = ({ itemNames }) => {
                     sx={{color: 'text.secondary'}}
                     onClick={() => scrollToSection(item.label)}
                 >
-                    {IconComponent && <IconComponent/>} {item.label}
+                    {IconComponent && <IconComponent style={{}}/>} {item.label}
                 </Button>
             )
         })}

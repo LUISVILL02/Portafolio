@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectModel } from "../../models/projectModel";
-import { Github } from '../../components/icons/social/Github'
+import { Github } from '../../components/icons/social/Github';
+import { iconSkillMap } from '../../utils/iconSkillsMap';
 
 interface ProjectCardProps {
     project: ProjectModel;
@@ -20,12 +21,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <p className="text-description">{project.description}</p>
             </div>
             <div className="flex justify-between items-center">
-                <div>
-                    {project.stack.map((tech, index) => (
-                        <span key={index}>{tech}</span>
-                    ))}
+                <div className="flex">
+                    {project.stack.map((tech, index) => {
+                        const IconSkill = iconSkillMap[tech];
+                        return(
+                            <IconSkill style={{width: "39px", height: "39px"}} key={index}/>
+                        )
+                    })}
                 </div>
                 <a className="w-[150px] h-[39px] border border-secondary text-description flex items-center justify-center
+                hover:shadow-[0_0_15px_0_#6412d1] hover:w-[170px]
                 bg-gradient-to-br from-secondary/20 to-[#1B1426]/20 gap-5
                 " href={project.github}>
                     <Github style={{width: "20px", height: "20px", fill: "white"}}/> 

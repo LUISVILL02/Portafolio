@@ -9,7 +9,7 @@ export const lisProjects: ProjectModel[] = [
         title: "Escuela en linea",
         description: "Proyecto full stack enfocado en la gestión de solicitudes e inquietudes de los acudientes de los estudiantes de un colegio.",
         image: escuelaEnLinea,
-        stack: ["Spring-boot", "React", "Postgresql"],
+        stack: ["SpringBoot", "ReactJs", "Postgresql"],
         github: "https://github.com/LUISVILL02/EscuelaEnLinea"
     },
     {
@@ -25,7 +25,7 @@ export const lisProjects: ProjectModel[] = [
         title: "Eliminatorias",
         description: "Aplicacion web para los partidos de las eliminatorias mundiales de la fifa.",
         image: eliminatorias,
-        stack: ["Spring-boot", "React", "Postgresql", "Css"],
+        stack: ["SpringBoot", "ReactJs", "Postgresql", "Css"],
         github: "https://github.com/LUISVILL02/AppEliminatorias"
     },
 ]
