@@ -6,7 +6,7 @@ export const Layaut = () => {
   return (
     <>
         <Navbar/>
-        <main className="flex-col justify-items-center flex gap-y-20">
+        <main className="flex-col justify-items-center flex gap-y-20 mb-[100px]">
             <Outlet/>
         </main>
     </>
