@@ -20,8 +20,13 @@ export default {
         },
         background: {
           DEFAULT: "#1b1426", 
-          paper: "rgba(0, 0, 0, 0.5)", 
+          paper: "rgba(0, 0, 0, 0.5)",
+          form: "rgba(158, 158, 158, 0.05)" 
         },
+        inputForm: {
+          DEFAULT: "rgba(158, 158, 158, 0.1)",
+          border: "rgba(224, 224, 224, 0.1)"
+        }
       },
       fontFamily: {
         sans: ["Ubuntu", "sans-serif"], 
