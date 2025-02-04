@@ -7,9 +7,9 @@ export const Socials = () => {
   return (
     <div className='flex flex-col top-0 left-[5%] fixed gap-[16px] items-center '>
         <div className='w-[1px] h-40 bg-white'></div>
-        <a href=""><Email/></a>
+        <a href=""><Email style={{}}/></a>
         <a href=""><Linkedin/></a>
-        <a href=""><Github/></a>
+        <a href=""><Github style={{}}/></a>
         <a href=""><Wapp/></a>
     </div>
   )

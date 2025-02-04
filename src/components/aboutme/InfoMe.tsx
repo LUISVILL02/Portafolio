@@ -1,4 +1,3 @@
-import { Button } from "@mui/material"
 
 
 export const InfoMe = () => {
@@ -11,7 +10,7 @@ export const InfoMe = () => {
             <h4 className="text-p">Backend & Frontend</h4>
           </div>
           <p className="text-p text-primary">Disfruto trabajar en entornos colaborativos, aplicando metodologías ágiles para lograr objetivos de manera rápida y efectiva. Siempre estoy en busca de nuevos retos que me permitan crecer y aportar valor al equipo.</p>
-          <button className="bg-secondary w-[291px] h-[81px] text-[35px] hover:bg-transparent hover:border hover:border-secondary ">
+          <button className=" transition-[background] duration-300 bg-secondary w-[291px] h-[81px] text-[35px] hover:bg-transparent hover:border hover:border-secondary ">
             Contáctame
           </button>
       </div>

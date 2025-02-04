@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                         )
                     })}
                 </div>
-                <a className="w-[150px] h-[39px] border border-secondary text-description flex items-center justify-center
+                <a className=" transition-[width] w-[150px] h-[39px] border border-secondary text-description flex items-center justify-center
                 hover:shadow-[0_0_15px_0_#6412d1] hover:w-[170px]
                 bg-gradient-to-br from-secondary/20 to-[#1B1426]/20 gap-5
                 " href={project.github}>
