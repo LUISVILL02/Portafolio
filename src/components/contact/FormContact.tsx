@@ -34,30 +34,32 @@ export const FormContact = () => {
             className="h-[670px] flex bg-background-form backdrop-blur-md p-[60px] justify-between items-center rounded-[20px]">
             <div className="w-[820px] flex flex-col gap-3">
                 <div className="flex gap-3">
-                    <InputComp label="Nombre" type="text" width={100}/>
-                    <InputComp label="Apellido" type="text" width={100}/>
+                    <InputComp label="Nombre" type="text" width={100} error={!!methods.formState.errors.Nombre}/>
+                    <InputComp label="Apellido" type="text" width={100} error={!!methods.formState.errors.Apellido}/>
                 </div>
-                <InputComp label="Correo" type="email" width={100}/>
-                <div className="flex flex-col">
+                <InputComp label="Correo" type="email" width={100} error={!!methods.formState.errors.Correo}/>
+                <div className="flex flex-col ">
                     <label htmlFor="" className="text-tittleCard">Mensaje</label>
                     <textarea 
-                        className="bg-inputForm h-[235px] border border-inputForm-border text-[20px] focus:outline-none p-[20px] focus:border-primary resize-none"
+                        className={`bg-inputForm h-[235px] border border-inputForm-border text-[20px] focus:outline-none p-[20px] resize-none
+                            ${methods.formState.errors.Mensaje ? 'border border-red-400': 'focus:border-primary'}`}
                         {...methods.register("Mensaje", {required: "El mensaje es requerido"})}
                         ></textarea>
                 </div>
             </div>
             <div className="h-[100%] flex flex-col gap-20 justify-end">
-                <div className="[filter:drop-shadow(0_4px_100px_#6412d1)]">
+                <div className="[filter:drop-shadow(0_4px_50px_#6412d1)]">
                     <Email style={{
                         width: "333px", 
                         height: "323px", 
                         backgroundColor: "transparent", 
                         rotate: "13deg",
+                        animation: "floating 3s ease-in-out infinite",
                         }}/>
                 </div>
                 <button 
                     disabled={loading}
-                    className="transition-[background] duration-300 bg-secondary w-[291px] h-[81px] text-[35px] hover:bg-transparent hover:border hover:border-secondary "
+                    className="transition-[background] duration-300 bg-secondary w-[291px] h-[81px] rounded-full text-[35px] hover:bg-primary hover:border hover:border-secondary "
                     type="submit"
                 >
                     {loading ? "Enviando..." : "Enviar"}

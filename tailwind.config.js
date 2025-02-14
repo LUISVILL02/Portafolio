@@ -21,7 +21,8 @@ export default {
         background: {
           DEFAULT: "#1b1426", 
           paper: "rgba(0, 0, 0, 0.5)",
-          form: "rgba(158, 158, 158, 0.05)" 
+          form: "rgba(158, 158, 158, 0.05)",
+          oval: "#552D8A"
         },
         inputForm: {
           DEFAULT: "rgba(158, 158, 158, 0.1)",

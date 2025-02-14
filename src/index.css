@@ -7,9 +7,102 @@
   background-color: #1b1426;
 }
 
-body {
-  margin: 0 260px 0 260px;
-  position: relative; 
-  padding-top: 5%;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  padding: 0 260px 100px 260px;
+  position: relative; 
+  padding-top: 5%;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+@layer utilities {
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-show {
+    animation: show 2s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 30%;
+  }
+
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes blink-shadow-opacity {
+    0%, 100% {
+      box-shadow:
+        0px 4px 20px 70px rgba(85, 45, 138, 0.01),
+        0px 0px 1px 45px rgba(186, 134, 255, 0.05),
+        0px 0px 1px 20px rgba(186, 134, 255, 0.1);
+    }
+    33% {
+      box-shadow:
+        0px 4px 20px 70px rgba(85, 45, 138, 0.1),
+        0px 0px 1px 45px rgba(186, 134, 255, 0.5),
+        0px 0px 1px 20px rgba(186, 134, 255, 0.3);
+    }
+    66% {
+      box-shadow:
+        0px 4px 20px 70px rgba(85, 45, 138, 0.3),
+        0px 0px 1px 45px rgba(186, 134, 255, 0.2),
+        0px 0px 1px 20px rgba(186, 134, 255, 0.6);
+    }
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  .animate-typing {
+    display: inline-block;
+    animation: typing 3s steps(20) infinite alternate, blink 1s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid white;
+  }
+}
