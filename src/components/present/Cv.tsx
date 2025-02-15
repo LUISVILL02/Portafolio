@@ -7,7 +7,8 @@ export const Cv = () => {
     <div>
       <a 
       onClick={() => setShow(true)}
-      className={`blink-shadow-opacity bg-primary-dark w-[89px] h-[89px] rounded-full flex gap-2 justify-center items-center z-20 absolute right-10 bottom-[-5%] cursor-pointer`}
+      className={`blink-shadow-opacity bg-primary-dark p-2 w-[89px] h-[89px] max-2xl:w-[60px] max-2xl:h-[60px] rounded-full 
+        flex gap-2 justify-center items-center z-20 absolute right-32 bottom-[-5%] max-2xl:-bottom-10 max-2xl:right-20 cursor-pointer`}
       style={{ 
         animation: "floating 3s ease-in-out infinite, blink-shadow-opacity 3s ease-in-out infinite",
          }}

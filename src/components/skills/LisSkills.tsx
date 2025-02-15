@@ -7,9 +7,9 @@ interface SkillsProps {
 
 export const LisSkills: React.FC<SkillsProps> = ({lisSkills, list}) => {
   return (
-    <div className='flex flex-col items-center gap-16'>
-        <h3 className='text-[50px]'>{list}</h3>
-        <div className='relative w-[500px] h-[500px]'>
+    <div className='flex flex-col items-center gap-16 max-2xl:gap-8'>
+        <h3 className='text-[50px] max-2xl:text-h2-sm'>{list}</h3>
+        <div className='relative w-[500px] h-[500px] max-2xl:w-[400px] max-2xl:h-[400px]'>
             {lisSkills.map((skill, index: number) => {
                 const IconSkills = iconSkillMap[skill.name];
                 return(
@@ -24,7 +24,7 @@ export const LisSkills: React.FC<SkillsProps> = ({lisSkills, list}) => {
                       animationDelay: `${Math.random() * 2}s`,
                     }}
                     >
-                        <IconSkills style={{}}/>
+                        <IconSkills/>
                     </div>
                 )
             })}

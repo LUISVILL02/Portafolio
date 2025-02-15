@@ -31,17 +31,17 @@ export const FormContact = () => {
   return (
     <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}
-            className="h-[670px] flex bg-background-form backdrop-blur-md p-[60px] justify-between items-center rounded-[20px]">
-            <div className="w-[820px] flex flex-col gap-3">
+            className="h-[670px] max-2xl:h-[470px] flex bg-background-form backdrop-blur-md p-[60px] justify-between items-center rounded-[20px]">
+            <div className="w-[820px] flex flex-col gap-3 max-2xl:w-[500px]">
                 <div className="flex gap-3">
                     <InputComp label="Nombre" type="text" width={100} error={!!methods.formState.errors.Nombre}/>
                     <InputComp label="Apellido" type="text" width={100} error={!!methods.formState.errors.Apellido}/>
                 </div>
                 <InputComp label="Correo" type="email" width={100} error={!!methods.formState.errors.Correo}/>
                 <div className="flex flex-col ">
-                    <label htmlFor="" className="text-tittleCard">Mensaje</label>
+                    <label htmlFor="" className="text-tittleCard max-2xl:text-tittleCard-lg">Mensaje</label>
                     <textarea 
-                        className={`bg-inputForm h-[235px] border border-inputForm-border text-[20px] focus:outline-none p-[20px] resize-none
+                        className={`bg-inputForm h-[235px] max-2xl:h-[135px] border border-inputForm-border text-[20px] focus:outline-none p-[20px] resize-none
                             ${methods.formState.errors.Mensaje ? 'border border-red-400': 'focus:border-primary'}`}
                         {...methods.register("Mensaje", {required: "El mensaje es requerido"})}
                         ></textarea>
@@ -49,17 +49,20 @@ export const FormContact = () => {
             </div>
             <div className="h-[100%] flex flex-col gap-20 justify-end">
                 <div className="[filter:drop-shadow(0_4px_50px_#6412d1)]">
-                    <Email style={{
-                        width: "333px", 
-                        height: "323px", 
-                        backgroundColor: "transparent", 
-                        rotate: "13deg",
+                    <Email
+                        className="w-[333px] h-[323px] bg-transparent rotate-[13deg] animation floating 3s ease-in-out infinite
+                        max-2xl:w-[200px] max-2xl:h-[200px] 
+                        " 
+                        style={{
                         animation: "floating 3s ease-in-out infinite",
                         }}/>
                 </div>
                 <button 
                     disabled={loading}
-                    className="transition-[background] duration-300 bg-secondary w-[291px] h-[81px] rounded-full text-[35px] hover:bg-primary hover:border hover:border-secondary "
+                    className="transition-[background] duration-300 bg-secondary w-[291px] h-[81px] rounded-full 
+                    text-[35px] hover:bg-primary hover:border hover:border-secondary 
+                    max-2xl:w-[200px] max-2xl:h-[60px] max-2xl:text-h2-xs
+                    "
                     type="submit"
                 >
                     {loading ? "Enviando..." : "Enviar"}

@@ -1,7 +1,7 @@
 
 import { CSSProperties } from "react"
 
-export const Html = (props: { style: CSSProperties | undefined }) => {
+export const Html = (props: { className?: string; style?: CSSProperties | undefined }) => {
   return (
     <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" style={props.style}>
     <path d="M9.6169 62.1029L4.07965 0H64.9204L59.3774 62.0914L34.4627 69L9.6169 62.1029Z" fill="white"/>

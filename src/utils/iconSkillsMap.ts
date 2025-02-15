@@ -16,7 +16,8 @@ import { NodeJs } from '../components/icons/skills/secondary/NodeJs';
 
 
 interface IconProps {
-    style: CSSProperties;
+    style?: CSSProperties;
+    className?: string;
 }
 
 export const iconSkillMap: Record<string, React.FC<IconProps>> = {

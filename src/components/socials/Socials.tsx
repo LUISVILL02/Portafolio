@@ -9,7 +9,7 @@ export const Socials = () => {
         <div className='w-[1px] h-40 bg-white'></div>
         <a href=""><Email style={{}}/></a>
         <a href="https://www.linkedin.com/in/luis-villamil-lv"><Linkedin/></a>
-        <a href="https://github.com/LUISVILL02"><Github style={{}}/></a>
+        <a href="https://github.com/LUISVILL02"><Github/></a>
         <a href="https://wa.link/6yc5wl"><Wapp/></a>
     </div>
   )
