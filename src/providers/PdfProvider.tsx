@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 const PdfViewerContext = createContext({
   show: false,
+  // @ts-ignore
   setShow: (show: boolean) => {}
 });
 

@@ -6,7 +6,8 @@ import { AboutMeIcon } from '../components/icons/AboutMeIcon';
 import { CSSProperties } from 'react';
 
 interface IconProps {
-    style: CSSProperties;
+    style?: CSSProperties;
+    className?: string;
 }
 
 export const iconMap: Record<string, React.FC<IconProps>> = {
