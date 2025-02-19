@@ -31,7 +31,8 @@ export const FormContact = () => {
   return (
     <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}
-            className="3xl:h-[670px] 2xl:h-[470px] flex bg-background-form backdrop-blur-md 3xl:p-[60px] 2xl:p-[50px] justify-between items-center rounded-[20px]">
+            className="3xl:h-[670px] 2xl:h-[470px] flex bg-background-form backdrop-blur-md 3xl:p-[60px] 2xl:p-[50px] 
+            justify-between items-center rounded-[20px] xl:w-[100%] xl:p-[20px]">
             <div className="3xl:w-[820px] flex flex-col gap-3 2xl:w-[500px]">
                 <div className="flex gap-3">
                     <InputComp label="Nombre" type="text" width={100} error={!!methods.formState.errors.Nombre}/>
@@ -47,11 +48,11 @@ export const FormContact = () => {
                         ></textarea>
                 </div>
             </div>
-            <div className="h-[100%] flex flex-col gap-20 justify-end">
+            <div className="h-[100%] flex flex-col gap-20 justify-end xl:justify-center xl:items-center">
                 <div className="[filter:drop-shadow(0_4px_50px_#6412d1)]">
                     <Email
                         className="3xl:w-[333px] 3xl:h-[323px] bg-transparent rotate-[13deg] animation floating 3s ease-in-out infinite
-                        2xl:w-[200px] 2xl:h-[200px] 
+                        2xl:w-[200px] 2xl:h-[200px] xl:w-[170px] xl:h-[170px] 
                         " 
                         style={{
                         animation: "floating 3s ease-in-out infinite",
@@ -61,7 +62,7 @@ export const FormContact = () => {
                     disabled={loading}
                     className="transition-[background] duration-300 bg-secondary 3xl:w-[291px] 3xl:h-[90px] rounded-full 
                     3xl:text-[35px] hover:bg-primary hover:border hover:border-secondary 
-                    2xl:w-[200px] 2xl:h-[60px] 2xl:text-button-2xl
+                    2xl:w-[200px] 2xl:h-[60px] 2xl:text-button-2xl xl:w-[150px] xl:h-[50px]
                     "
                     type="submit"
                 >

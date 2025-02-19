@@ -17,7 +17,7 @@ export const Item: React.FC<ItemProp> = ({ itemNames, scroll }) => {
         {itemNames.map(item => {
             const IconComponent = iconMap[item.icon];
             return (
-                <button className={` ${scroll ? `text-description flex items-center gap-2 group hover:translate-x-[-60px] 
+                <button className={` ${scroll ? `3xl:text-description flex items-center gap-2 group hover:translate-x-[-60px] 
                     transition-transform duration-300 ease-in hover:w-[230px] hover:bg-white hover:p-3 hover:pl-9 
                     hover:[clip-path:polygon(20%_0%,100%_0%,100%_100%,0%_100%)] `
                     : `pl-3 pr-3 flex items-center gap-2 group hover:bg-[#552d8a28] hover:rounded-full transition-all 
@@ -26,7 +26,7 @@ export const Item: React.FC<ItemProp> = ({ itemNames, scroll }) => {
                     key={item.label}
                     onClick={() => scrollToSection(item.label)}
                 >
-                    {IconComponent && <IconComponent className='3xl:w-[39px] xl:w-[25px]'/>} 
+                    {IconComponent && <IconComponent className='3xl:w-[39px] 2xl:w-[30px] xl:w-[30px]'/>} 
                     <span className={`${scroll ? `hidden group-hover:block group-hover:text-primary` 
                         : `3xl:text-button xl:text-button-xl 2xl:text-button-2xl`
                         }`}

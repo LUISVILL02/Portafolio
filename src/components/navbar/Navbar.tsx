@@ -24,7 +24,7 @@ export const Navbar = () => {
               }
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <HomeIcon className="3xl:w-[39px] 2xl:w-[32px] xl:w-[25px]"/> {scroll ? '' : 'Inicio'}
+              <HomeIcon className="3xl:w-[39px] 2xl:w-[32px] xl:w-[30px]"/> {scroll ? '' : 'Inicio'}
             </p>
             <ul className={`flex gap-10 ${scroll ? 'flex-col gap-5 P-5 items-center' : '2xl:gap-3 xl:gap-3'}`}>
               <Item itemNames={itemNavbarData["ITEMS"]} scroll={scroll}/>
