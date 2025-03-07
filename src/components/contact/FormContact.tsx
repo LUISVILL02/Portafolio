@@ -16,6 +16,7 @@ export interface FormContact{
 export const FormContact = () => {
 
     const [loading, setLoading] = useState(false);
+    const [showCheck, setShowCheck] = useState(false);
 
     const methods = useForm<FormContact>();
     const errors = methods.formState.errors;
@@ -26,7 +27,8 @@ export const FormContact = () => {
         if(send.status === 200){
             setLoading(false);
             methods.reset();
-            //animación de enviado
+            setShowCheck(true);
+            setTimeout(() => setShowCheck(false), 2000);
         }
     }
 
@@ -64,13 +66,24 @@ export const FormContact = () => {
                 </div>
                 <button 
                     disabled={loading}
-                    className="transition-[background] duration-300 bg-secondary 3xl:w-[291px] 3xl:h-[90px] rounded-full 
+                    className="place-items-center transition-[background] duration-300 bg-secondary 3xl:w-[291px] 3xl:h-[90px] rounded-full 
                     3xl:text-[35px] hover:bg-primary hover:border hover:border-secondary 
                     2xl:w-[200px] 2xl:h-[60px] 2xl:text-button-2xl text-button-xl xl:w-[150px] xl:h-[50px] lg:w-[120px] lg:h-[50px] w-[140px] h-[60px]
                     "
                     type="submit"
                 >
-                    {loading ? "Enviando..." : "Enviar"}
+                    {loading ? <svg className="w-8 h-8 animate-spin ..." viewBox="0 0 24 24" >
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0116 0h2a10 10 0 10-20 0h2z"></path>
+                    </svg> : showCheck ?
+                        <svg className="w-8 h-8 text-white transition-opacity duration-1000 opacity-100" viewBox="0 0 24 24" fill="none"
+                        style={{ 
+                            animation: "fadeInOut 2s ease-in-out",
+                             }}
+                        >
+                            <path stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" d="M5 12l4 4L19 7" />
+                        </svg>
+                     : "Enviar"}
                 </button>
             </div>
         </form>

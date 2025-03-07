@@ -5,11 +5,12 @@ import {
 import { routes } from "./routes";
 import { Layaut } from "../pages/Layaut";
 import { Landing } from "../pages/home/Landing";
+import { NotFound } from "../pages/NotFound";
 
 const router = createBrowserRouter([{
     path: routes.HOME,
     element: <Layaut/>,
-    errorElement: <h1>404</h1>,
+    errorElement: <NotFound/>,
     children: [
         {
             path: routes.HOME,

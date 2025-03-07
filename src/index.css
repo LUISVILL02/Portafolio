@@ -85,6 +85,19 @@ body::-webkit-scrollbar, .none-scrollbar-card::-webkit-scrollbar{
     animation-range: entry 10% cover 40%;
   }
 
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+    
+  }
+
   @keyframes floating {
     0%, 100% {
       transform: translateY(0);
