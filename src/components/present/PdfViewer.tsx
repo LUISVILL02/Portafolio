@@ -33,15 +33,15 @@ export const PdfViewer = () => {
           >  
         </iframe>
         <div className="absolute top-0 right-0 flex flex-row gap-2 p-2 items-center">  
-          <button className="flex items-center justify-center  w-[80px] h-[80px] rounded-full bg-primary  hover:bg-primary-dark text-white font-bold transition-colors duration-300"
+          <button className="flex items-center justify-center  w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] rounded-full bg-primary  hover:bg-primary-dark text-white font-bold transition-colors duration-300"
             onClick={handleClose}>
             <CloseIcon style={{width: "40px", height: "40px"}}/>
-            </button>
-            <a href={cvPdf} download={cvPdf} 
-              className="flex flex-row gap-2 items-center bg-primary rounded-full p-5  hover:bg-primary-dark text-white font-bold transition-colors duration-300"
-            >
-              <Download style={{width: "40px", height: "40px"}}/> Descargar
-            </a>
+          </button>
+          <a href={cvPdf} download={cvPdf} 
+            className="flex flex-row gap-2 items-center bg-primary rounded-full p-4 lg:p-[10px] hover:bg-primary-dark text-white font-bold transition-colors duration-300"
+          >
+            <Download clasName="lg:w-[30px] lg:h-[40px] w-[15px] h-[15px]"/> Descargar
+          </a>
         </div>
     </div>
   );

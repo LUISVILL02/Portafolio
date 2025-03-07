@@ -10,7 +10,10 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="3xl:w-[430px] 3xl:h-[455px] 2xl:w-[300px] 2xl:h-[320px] border border-secondary bg-gradient-to-br from-[#664A8C]/50 to-[#1B1426]/50 flex flex-col" 
+    <div className="3xl:w-[430px] 3xl:h-[455px] 2xl:w-[300px] 2xl:h-[320px] xl:w-[360px] lg:w-[330px] border 
+        border-secondary bg-gradient-to-br from-[#664A8C]/50 to-[#1B1426]/50 flex flex-col
+        w-[350px]
+        " 
     style={{ boxShadow: "2px 4px 30px 0px rgba(0, 0, 0, 0.25)",
      }}
     >

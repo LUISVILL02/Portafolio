@@ -3,7 +3,7 @@ import { CSSProperties } from "react"
 
 export const Kotlin = (props: { className?: string; style?: CSSProperties | undefined }) => {
   return (
-    <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" style={props.style} className={props.className}>
+    <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" style={props.style} className={`${props.className} xl:w-[69px] xl:h-[69px] md:w-[35px] md:h-[35px]`}>
     <g clipPath="url(#clip0_79_145)">
     <path d="M34.6437 0L0 36.432V69L34.592 34.3447L69 0H34.6437Z" fill="url(#paint0_linear_79_145)"/>
     <path d="M0 69L34.592 34.3477L69 69H0Z" fill="url(#paint1_linear_79_145)"/>

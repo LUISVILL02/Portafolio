@@ -3,7 +3,7 @@ import { CSSProperties } from "react"
 
 export const Html = (props: { className?: string; style?: CSSProperties | undefined }) => {
   return (
-    <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" style={props.style}>
+    <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg" style={props.style} className={`${props.className} xl:w-[69px] xl:h-[69px] md:w-[35px] md:h-[35px]`}>
     <path d="M9.6169 62.1029L4.07965 0H64.9204L59.3774 62.0914L34.4627 69L9.6169 62.1029Z" fill="white"/>
     <path d="M34.5 63.7214L54.6336 58.141L59.3687 5.07715H34.5V63.7214Z" fill="#CECCCB"/>
     <path d="M34.5 28.1118H24.4202L23.7245 20.3119H34.5V12.696H15.4014L15.5825 14.7373L17.4541 35.7277H34.5V28.1118ZM34.5 47.8918L34.4655 47.9004L25.9842 45.609L25.4409 39.5342H17.7962L18.8629 51.4942L34.4655 55.8239L34.5 55.8153V47.8918Z" fill="#1B1426"/>
