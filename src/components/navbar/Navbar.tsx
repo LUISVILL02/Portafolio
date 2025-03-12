@@ -31,7 +31,7 @@ export const Navbar = () => {
           </div>
           <div className={`fixed lg:hidden bg-purple-950 top-0 right-0 md:left-[70%] left-[50%] z-50
              w-full h-full transition-all
-              shadow-[-550px_0px_0px_180px_rgba(0,0,0,0.5)] before:absolute before:-left-[100%] before:top-0 before:bottom-0 before:right-0 
+              shadow-[-500px_0px_0px_180px_rgba(0,0,0,0.5)] before:absolute before:-left-[100%] before:top-0 before:bottom-0 before:right-0 
                 before:bg-transparent
               ${showMen ? 'block' : 'hidden'} flex flex-col
               `}>
