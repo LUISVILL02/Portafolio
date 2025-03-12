@@ -13,10 +13,10 @@ export const Picture = () => {
       <div className="relative 3xl:w-[100%] 3xl:h-[100%] rounded-full z-10 3xl:left-20
         2xl:w-[350px] 2xl:h-[350px] 2xl:left-5 2xl:-top-5 lg:w-[250px] lg:h-[250px] lg:-left-10 
         md:left-[25%] md:h-[300px] md:w-[50%] md:top-0
-        left-14
+        left-16
       ">
         <img
-          className="w-full h-full object-contain z-10 rounded-full"
+          className="w-full h-full object-contain z-10 rounded-full mask-fade"
           src={yo}
           alt="Foto de Luisvill"
         />
@@ -28,7 +28,7 @@ export const Picture = () => {
               xl:w-[320px] xl:h-[220px] xl:-left-20 xl:top-10
               lg:w-[300px] lg:h-[200px] lg:-left-20
               md:w-[350px] md:h-[250px] md:top-5 md:left-[15%]
-              w-[350px] h-[250px] left-[-10%] top-8
+              w-[350px] h-[250px] left-[-10%] top-8 hidden lg:block
       "
       style={{  clipPath: 'polygon(10% 0%, 90% 0%, 50% 100%)',
         boxShadow: '0px 0px 30px 5px red'

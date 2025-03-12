@@ -14,7 +14,7 @@ export const Cv = () => {
         xl:right-10 xl:bottom-[-5%] xl:w-[60px] xl:h-[60px]
         lg:w-[50px] lg:h-[50px] lg:bottom-0 lg:right-10
         md:w-[50px] md:h-[50px] md:right-32 md:bottom-0
-        w-[60px] h-[60px] -bottom-10 right-40
+        w-[60px] h-[60px] -bottom-10 right-36
         `}
       style={{ 
         animation: "floating 3s ease-in-out infinite, blink-shadow-opacity 3s ease-in-out infinite",

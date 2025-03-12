@@ -24,14 +24,14 @@ export const Navbar = () => {
     <>
       <header className="mb-40 2xl:h-[100px] 2xl:mb-32 xl:h-[80px] 3xl:h-[120px] lg:h-[60px]">
           <div onClick={() => setShowMen(!showMen)}
-            className="fixed top-10 left-22 z-30 lg:hidden block bg-black backdrop-blur-md bg-opacity-20 rounded-[10px] border border-[#552D8A]
-            w-max h-max p-3 items-center cursor-pointer hover:bg-primary transition-colors
+            className="fixed top-0 left-0 right-0 z-30 lg:hidden block bg-background-oval border border-[#552D8A]
+            h-max p-3 items-center cursor-pointer hover:bg-primary transition-colors
           ">
             <MenuIcon className="w-[30px] h-[30px]"/>
           </div>
           <div className={`fixed lg:hidden bg-purple-950 top-0 right-0 md:left-[70%] left-[50%] z-50
              w-full h-full transition-all
-              shadow-[-600px_0px_0px_180px_rgba(0,0,0,0.5)] before:absolute before:-left-[100%] before:top-0 before:bottom-0 before:right-0 
+              shadow-[-550px_0px_0px_180px_rgba(0,0,0,0.5)] before:absolute before:-left-[100%] before:top-0 before:bottom-0 before:right-0 
                 before:bg-transparent
               ${showMen ? 'block' : 'hidden'} flex flex-col
               `}>

@@ -37,7 +37,7 @@ export const FormContact = () => {
         <form onSubmit={methods.handleSubmit(onSubmit)}
             className="3xl:h-[670px] 2xl:h-[470px] flex bg-background-form backdrop-blur-md 3xl:p-[60px] 2xl:p-[50px] 
             justify-between items-center 3xl:rounded-[20px] 2xl:rounded-[18px] xl:rounded-[15px] 
-            lg:rounded-[10px] xl:w-[100%] lg:w-[100%] md:w-[80%] xl:p-[40px] lg:p-[30px] lg:flex-row lg:gap-5 flex-col p-10 rounded-[10px]">
+            lg:rounded-[10px] xl:w-[100%] lg:w-[100%] md:w-[80%] xl:p-[40px] lg:p-[30px] lg:flex-row lg:gap-5 flex-col p-5 rounded-[10px]">
             <div className="3xl:w-[820px] flex flex-col gap-3 2xl:w-[500px] md:w-[100%]">
                 <div className="flex gap-3 flex-row">
                     <InputComp label="Nombre" type="text" width={100} error={errors.Nombre}/>
