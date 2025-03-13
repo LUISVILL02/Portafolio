@@ -6,6 +6,7 @@ import { useNavbar } from "../../hooks/useNavbar";
 import { useEffect, useState } from "react";
 import { CloseIcon } from "../icons/CloseIcon";
 import { MenuIcon } from "../icons/MenuIcon";
+import { Icon } from "../icons/Icon";
 
 export const Navbar = () => {
 
@@ -25,9 +26,9 @@ export const Navbar = () => {
       <header className="mb-40 2xl:h-[100px] 2xl:mb-32 xl:h-[80px] 3xl:h-[120px] lg:h-[60px]">
           <div onClick={() => setShowMen(!showMen)}
             className="fixed top-0 left-0 right-0 z-30 lg:hidden block bg-background-oval border border-[#552D8A]
-            h-max p-3 items-center cursor-pointer hover:bg-primary transition-colors
+            h-max p-3 items-center
           ">
-            <MenuIcon className="w-[30px] h-[30px]"/>
+            <MenuIcon className="w-[30px] h-[30px] cursor-pointer"/>
           </div>
           <div className={`fixed lg:hidden bg-purple-950 top-0 right-0 md:left-[70%] left-[50%] z-50
              w-full h-full transition-all
@@ -60,7 +61,7 @@ export const Navbar = () => {
               }
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <HomeIcon className="3xl:w-[39px] 2xl:w-[32px] xl:w-[30px] lg:w-[30px]"/> {scroll ? '' : 
+              <Icon className="lg:w-[50px] lg:h-[50px]"/> {scroll ? '' : 
               <span className="3xl:block 2xl:block xl:block lg:block">Inicio</span>}
             </p>
             <ul className={`flex gap-10 ${scroll ? 'flex-col gap-5 P-5 items-center' : '2xl:gap-3 xl:gap-3 lg:gap-0'}`}>
