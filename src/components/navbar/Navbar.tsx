@@ -61,7 +61,7 @@ export const Navbar = () => {
               }
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <Icon className="lg:w-[50px] lg:h-[50px]"/> {scroll ? '' : 
+              <Icon className="lg:w-[70px] lg:h-[70px]"/> {scroll ? '' : 
               <span className="3xl:block 2xl:block xl:block lg:block">Inicio</span>}
             </p>
             <ul className={`flex gap-10 ${scroll ? 'flex-col gap-5 P-5 items-center' : '2xl:gap-3 xl:gap-3 lg:gap-0'}`}>
