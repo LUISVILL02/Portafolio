@@ -1,0 +1,219 @@
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #ba86ff 0%,
+    rgba(186, 134, 255, 0.8) 50%,
+    #ba86ff 100%
+  );
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline item positioning */
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  opacity: 0;
+  animation: timeline-fade-in 0.8s ease-out forwards;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: 50%;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: 50%;
+  padding-right: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: 2rem;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: 2rem;
+  text-align: right;
+}
+
+/* Timeline circle */
+.timeline-circle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ba86ff;
+  border: 4px solid #1b1426;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(186, 134, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.timeline-circle:hover {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 0 20px rgba(186, 134, 255, 0.8);
+}
+
+/* Arrows pointing to timeline */
+.timeline-item:nth-child(odd) .timeline-content::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid rgba(186, 134, 255, 0.2);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid rgba(186, 134, 255, 0.2);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* nth-child specific alignments */
+.timeline-item:nth-child(odd) .timeline-section-title {
+  justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) .timeline-section-title {
+  justify-content: flex-end;
+}
+
+.timeline-item:nth-child(odd) .timeline-list-item {
+  flex-direction: row;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-list-item {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-toggle-btn {
+  margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-toggle-btn {
+  margin-left: auto;
+}
+
+/* Expandable content animation */
+.timeline-expandable {
+  overflow: hidden;
+  animation: expand 0.3s ease-out;
+}
+
+.timeline-collapsible {
+  overflow: hidden;
+  animation: collapse 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes timeline-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expand {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+  
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 60px;
+    padding-right: 0;
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  
+  .timeline-circle {
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content::after,
+  .timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+    border-right: 10px solid rgba(186, 134, 255, 0.2);
+    border-left: none;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-section-title {
+    justify-content: flex-start;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-list-item {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-toggle-btn {
+    margin-left: 0;
+  }
+}
