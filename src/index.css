@@ -27,15 +27,22 @@ body::-webkit-scrollbar, .none-scrollbar-card::-webkit-scrollbar{
 .no-scroll {
   overflow: hidden;
 }
+
+/* Efecto de máscara para todas las pantallas */
+.mask-fade {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 97%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 97%
+  );
+}
+
 @media (min-width: 300px) and (max-width: 768px){
-  
-  .mask-fade {
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 70%,
-      rgba(0, 0, 0, 0) 90%
-    );
-  }
   body{
     padding: 5% 16px 100px 16px;
   }
