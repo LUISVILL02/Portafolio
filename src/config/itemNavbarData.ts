@@ -23,6 +23,11 @@ export const itemNavbarData: NavbarData = {
             href: routes.PROJECT
         },
         {
+            label: "Experiencia",
+            icon: "Experiencia",
+            href: routes.EXPERIENCE
+        },
+        {
             label: "Habilidades",
             icon: "Habilidades",
             href: routes.SKILLS

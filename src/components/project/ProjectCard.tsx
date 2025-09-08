@@ -12,12 +12,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="3xl:w-[430px] 3xl:h-[455px] 2xl:w-[300px] 2xl:h-[320px] xl:w-[360px] lg:w-[330px] border 
         border-secondary bg-gradient-to-br from-[#664A8C]/50 to-[#1B1426]/50 flex flex-col
-        w-[350px] rounded-md lg:rounded-none
+        w-[350px] rounded-md lg:rounded-none overflow-y-hidden
         " 
     style={{ boxShadow: "2px 4px 30px 0px rgba(0, 0, 0, 0.25)",
      }}
     >
-        <img src={project.image} alt={project.title} className="rounded-tl-md rounded-tr-md lg:rounded-none" />
+        <img src={project.image} alt={project.title} className="rounded-tl-md rounded-tr-md lg:rounded-none max-h-[200px]" />
         <div className="p-4 flex flex-col justify-between h-[100%]">
             <div className="w-full">
                 <h3 className="text-tittleCard max-2xl:text-tittleCard-lg text-primary">{project.title}</h3>

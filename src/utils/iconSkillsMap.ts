@@ -5,6 +5,11 @@ import { ReactJs } from '../components/icons/skills/ReactJs';
 import { Postgresql } from '../components/icons/skills/Postgresql';
 import { Java } from '../components/icons/skills/Java';
 import { Javascript } from '../components/icons/skills/Javascript';
+import { Typescript } from '../components/icons/skills/Typescript';
+import { Tailwind } from '../components/icons/skills/Tailwind';
+import { Net } from '../components/icons/skills/Net';
+import { Cshart } from '../components/icons/skills/Cshart';
+import { Angular } from '../components/icons/skills/Angular';
 import { Html } from '../components/icons/skills/Html';
 import { Git } from '../components/icons/skills/Git';
 import { Docker } from '../components/icons/skills/Docker';
@@ -26,6 +31,11 @@ export const iconSkillMap: Record<string, React.FC<IconProps>> = {
     Postgresql,
     Java,
     Javascript,
+    Typescript,
+    Tailwind,
+    Net,
+    Cshart,
+    Angular,
     Html,
     Git,
     Docker,

@@ -6,7 +6,12 @@ export const listMainSkills: { name: string; top: number; left: number }[] = [
     {name: "Javascript", top: 60, left: 10},
     {name: "Docker", top: 80, left: 20},
     {name: "Git", top: 13, left: 50},
-    {name: "Html", top: 55, left: 75},
+    {name: "Html", top: 55, left: 65},
+    {name: "Typescript", top: 40, left: 0},
+    {name: "Tailwind", top: 70, left: 80},
+    {name: "Net", top: 10, left: 85},
+    {name: "Cshart", top: 30, left: 90},
+    {name: "Angular", top: 55, left: 95},
     {name: "Css", top: 85, left: 60}
 ]
 

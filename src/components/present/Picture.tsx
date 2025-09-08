@@ -1,4 +1,4 @@
-import yo  from '../../assets/yo.png'
+import Foto  from '../../assets/FotoEmpleo_sin_fondo.png'
 
 export const Picture = () => {
   return (
@@ -10,14 +10,14 @@ export const Picture = () => {
                   md:w-[100%] md:h-[100%]
                   w-[60%] h-[60%]
                   ">
-      <div className="relative 3xl:w-[100%] 3xl:h-[100%] rounded-full z-10 3xl:left-20
+      <div className="relative 3xl:w-[100%] 3xl:h-[100%] z-10 3xl:left-20
         2xl:w-[350px] 2xl:h-[350px] 2xl:left-5 2xl:-top-5 lg:w-[250px] lg:h-[250px] lg:-left-10 
         md:left-[25%] md:h-[300px] md:w-[50%] md:top-0
         left-16
       ">
         <img
-          className="w-full h-full object-contain z-10 rounded-full mask-fade"
-          src={yo}
+          className="w-full h-full object-contain z-10 mask-fade"
+          src={Foto}
           alt="Foto de Luisvill"
         />
       </div>

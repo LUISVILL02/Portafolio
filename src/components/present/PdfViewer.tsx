@@ -1,4 +1,4 @@
-import cvPdf from "../../assets/Luis-Angel-VIllamil-CV.pdf";
+import cvPdf from "../../assets/Luis_Angel_Villamil_Perez_CV_sep_2025.pdf";
 import { usePdfViewer } from "../../providers/PdfProvider";
 import { Download } from "../icons/Download";
 import { CloseIcon } from "../icons/CloseIcon"
